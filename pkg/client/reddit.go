@@ -55,7 +55,7 @@ func RssHandler(redditURL string, now NowFn, client *http.Client, getArticle Get
 		return
 	}
 
-	req.Header.Add("User-Agent", "reddit-rss 1.0")
+	req.Header.Add("User-Agent", "Custom reddit rss forked from github trashhalo by /u/laaabaseball ")
 
 	resp, err := client.Do(req)
 	if err != nil {
