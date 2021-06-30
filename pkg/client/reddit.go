@@ -42,7 +42,7 @@ func RssHandler(redditURL string, now NowFn, client *http.Client, getArticle Get
 	ctx := r.Context()
 
 	if r.URL.String() == "/" {
-		http.Redirect(w, r, "https://www.reddit.com/r/rss/comments/fvg3ed/i_built_a_better_rss_feed_for_reddit/", 301)
+		http.Redirect(w, r, "https://pornrulez.co?api", 301)
 		return
 	}
 
@@ -55,8 +55,7 @@ func RssHandler(redditURL string, now NowFn, client *http.Client, getArticle Get
 		return
 	}
 
-	req.Header.Add("User-Agent", "Custom reddit rss forked from github trashhalo by /u/laaabaseball ")
-
+	req.Header.Add("User-Agent", "web:co.pornrulez:v1.0 (by /u/pornrulez)") 
 	resp, err := client.Do(req)
 	if err != nil {
 		http.Error(w, err.Error(), 500)
