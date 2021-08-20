@@ -55,7 +55,7 @@ func RssHandler(redditURL string, now NowFn, client *http.Client, getArticle Get
 		return
 	}
 
-	req.Header.Add("User-Agent", "web:co.pornrulez:v1.0 (by /u/pornrulez)") 
+	req.Header.Add("User-Agent", "web:co.pornrulez:v1.1 (by /u/laaansfw)") 
 	resp, err := client.Do(req)
 	if err != nil {
 		http.Error(w, err.Error(), 500)
